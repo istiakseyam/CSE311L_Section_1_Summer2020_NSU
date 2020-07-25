@@ -1,0 +1,36 @@
+<?php
+$link = mysqli_connect('localhost','root','','homework2');
+if($link){
+    echo "connected <br>";
+}else{
+    die("error in connection ! ".mysqli_error($link));
+}
+$sql = "CREATE TABLE jobs(
+JOB_ID VARCHAR(10) PRIMARY KEY NOT NULL,
+JOB_TITLE VARCHAR(35) NOT NULL,
+MIN_SALARY INT(6),
+MAX_SALARY INT(6));";
+$res = mysqli_query($link,$sql);
+if($res){
+    echo "table created";
+}
+else
+    echo "error!" .mysqli_error($link);
+
+$sql2 ="INSERT INTO jobs VALUES('AD_PRESS','President', 2000,4000;";
+$sql2 .="INSERT INTO jobs VALUES('AD_VP','Admin vice President', 1500,3000;";
+$sql2 .="INSERT INTO jobs VALUES('AD_ASST','Admin assistint', 3000,6000;";
+$sql2 .="INSERT INTO jobs VALUES('AD_MGR','Accounting meneger', 8200,16000;";
+$sql2 .="INSERT INTO jobs VALUES('SA_MAN','sales manager', 10000,20000;";
+$sql2 .="INSERT INTO jobs VALUES('SA_REP','salrs reprasinttatibe', 3000,6000;";
+$res2 = mysqli_multi_query($link,$sql2);
+    if($res2){
+        echo "values are inserted <br>";
+    } else{
+        echo "error in insertion ".mysqli_error($link);
+    }
+ 
+
+mysqli_close($link);
+
+?>
