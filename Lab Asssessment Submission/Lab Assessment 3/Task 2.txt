@@ -1,0 +1,1 @@
+SELECT last_name, job_id, hire_date FROM employees_table ORDER BY Hire_Date BETWEEN '1998-02-20' AND '1998-05-01' ASC ;
