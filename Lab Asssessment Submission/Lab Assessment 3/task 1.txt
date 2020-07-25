@@ -1,1 +1,1 @@
-SELECT Last_Name, Department_Id, ((Salary/12)/7) as 'weekly salary' FROM Employees
+SELECT Last_Name, Department_Id, (Salary/4) as 'weekly salary' FROM Employees
