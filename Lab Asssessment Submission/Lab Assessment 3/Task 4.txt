@@ -1,4 +1,3 @@
-SELECT Last_Name, Department_Id
+SELECT Last_Name, Job_Id,Hire_Date
 FROM Employees 
-WHERE Department_Id BETWEEN (20 AND 50)
-ORDER By Last_Name;
+WHERE Hire_Date BETWEEN ('1998-02-20') AND ('1998-05-01')
