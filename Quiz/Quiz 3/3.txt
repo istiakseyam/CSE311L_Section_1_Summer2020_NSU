@@ -1,0 +1,6 @@
+ans:1
+SELECT Last_Name as "Employee", Job_Id as "Title" FROM Employees
+ans:2
+SELECT Last_Name, Salary,Commission_pct FROM Employees where Commission_pct is NOT null
+ans:3
+SELECT Last_Name,Hire_Date FROM Employees where Hire_Date= '1994-01-01'
