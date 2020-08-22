@@ -1,0 +1,5 @@
+1.
+SELECT max(Salary) "Maximum", min(Salary) "Minimum", avg(Salary) "Average" FROM Employees
+2.
+3.
+SELECT job_id, COUNT(*) FROM Employees GROUP BY job_id
