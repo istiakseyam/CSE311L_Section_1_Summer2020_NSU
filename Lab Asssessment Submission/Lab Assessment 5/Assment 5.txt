@@ -1,5 +1,8 @@
 1.
 SELECT max(Salary) "Maximum", min(Salary) "Minimum", avg(Salary) "Average" FROM Employees
 2.
+SELECT Job_id,MAX(Salary) 'Maximum',MIN(Salary) 'Minimum',SUM(Salary) 'Sum',AVG(Salary) 'Average' FROM Employees GROUP BY Job_Id
 3.
 SELECT job_id, COUNT(*) FROM Employees GROUP BY job_id
+4.
+SELECT manager_id, MIN(salary) FROM Employees WHERE manager_id IS NOT NULL GROUP BY manager_id HAVING MIN(salary) > 6000 ORDER BY MIN(salary) DESC
